@@ -260,7 +260,7 @@ local MyService = Utils.Services.AnyServiceName
 ## 💡 Usage Example
 
 ```lua
-local Utils = require(path.to.Utils)
+local Utils = loadstring(game:HttpGet("https://raw.githubusercontent.com/volmaksDev/My-Scripts/refs/heads/main/AdvancedUtils.lua"))()
 Utils.init()
 
 -- Now use any service directly:
