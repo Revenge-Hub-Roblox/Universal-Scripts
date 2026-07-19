@@ -29,82 +29,84 @@
         Camera:GetPropertyChangedSignal("FieldOfView"):Connect(CameraCache);
         Camera:GetPropertyChangedSignal("ViewportSize"):Connect(CameraCache);
 
-getgenv().Library = {
-	['Directory'] = 'Esp',
-	['Cache'] = {},
-	['Holder'] = nil,
-	['Threads'] = {},
-	['Connections'] = {},
+        getgenv().Library = {
+            ['Directory'] = 'Esp',
+            ['Cache'] = {},
+            ['Holder'] = nil,
+            ['Threads'] = {},
+            ['Connections'] = {},
 
-	['Table'] = {
-		['Enabled'] = true,
-		['Distance'] = 7520,
+            ['Table'] = {
+                ['Enabled'] = true,
+                ['Distance'] = 7520,
 
-		['Boxes'] = {
-			['Enabled'] = true,
+                ['Boxes'] = {
+                    ['Enabled'] = true,
 
-			['Bounding Box'] = {
-				['Enabled'] = true,
-				['IncludeAcsessories'] = false,
-				['BoxX'] = 0,
-				['BoxY'] = 0,
-			},
+                    ['Bounding Box'] = {
+                        ['Enabled'] = true,
+                        ['IncludeAcsessories'] = false,
+                        ['BoxX'] = 0,
+                        ['BoxY'] = 0,
+                    },
 
-			['Box Glow'] = {
-				['Enabled'] = true,
-				['Top'] = Color3.fromRGB(255, 255, 255),
-				['Bot'] = Color3.fromRGB(255, 255, 255),
-				['Transparency'] = {0.9, 0.9},
-			},
+                    ['Box Glow'] = {
+                        ['Enabled'] = true,
+                        ['Top'] = Color3.fromRGB(255, 255, 255),
+                        ['Bot'] = Color3.fromRGB(255, 255, 255),
+                        ['Transparency'] = {0.9, 0.9},
+                    },
 
-			['Gradients'] = {
-				['Top'] = Color3.fromRGB(255, 255, 255),
-				['Bot'] = Color3.fromRGB(255, 255, 255),
-			},
+                    ['Gradients'] = {
+                        ['Top'] = Color3.fromRGB(255, 255, 255),
+                        ['Bot'] = Color3.fromRGB(255, 255, 255),
+                    },
 
-			['Filled'] = {
-				['Enabled'] = true,
-				['Top'] = Color3.fromRGB(255, 255, 255),
-				['Bot'] = Color3.fromRGB(255, 255, 255),
-				['Transparency'] = {1, 0.8},
-			},
-		},
+                    ['Filled'] = {
+                        ['Enabled'] = true,
+                        ['Top'] = Color3.fromRGB(255, 255, 255),
+                        ['Bot'] = Color3.fromRGB(255, 255, 255),
+                        ['Transparency'] = {1, 0.8},
+                    },
+                },
 
-		['Bars'] = {
-			['Health Bar'] = {
-				['Enabled'] = true,
-				['Top'] = Color3.fromRGB(0, 255, 0),
-				['Mid'] = Color3.fromRGB(255, 170, 0),
-				['Bot'] = Color3.fromRGB(255, 0, 0),
-			},
+                ['Bars'] = {
+                    ['Health Bar'] = {
+                        ['Enabled'] = true,
+                        ['Top'] = Color3.fromRGB(0, 255, 0),
+                        ['Mid'] = Color3.fromRGB(255, 170, 0),
+                        ['Bot'] = Color3.fromRGB(255, 0, 0),
+                    },
 
-			['Armor Bar'] = {
-				['Enabled'] = false,
-				['Top'] = Color3.fromRGB(255, 255, 255),
-				['Mid'] = Color3.fromRGB(220, 220, 220),
-				['Bot'] = Color3.fromRGB(180, 180, 180),
-			},
-		},
+                    ['Armor Bar'] = {
+                        ['Enabled'] = false,
+                        ['Top'] = Color3.fromRGB(255, 255, 255),
+                        ['Mid'] = Color3.fromRGB(220, 220, 220),
+                        ['Bot'] = Color3.fromRGB(180, 180, 180),
+                    },
+                },
 
-		['Texts'] = {
-			['Name'] = {
-       ['Enabled'] = true,
-				['Color'] = Color3.fromRGB(255, 255, 255),
-			},
+                ['Texts'] = {
+                    ['Name'] = {
+            ['Enabled'] = true,
+                        ['Color'] = Color3.fromRGB(255, 255, 255),
+                    },
 
-			['Distance'] = {
-				['Enabled'] = true,
-				['Color'] = Color3.fromRGB(255, 255, 255),
-			},
+                    ['Distance'] = {
+                        ['Enabled'] = true,
+                        ['Color'] = Color3.fromRGB(255, 255, 255),
+                    },
 
-			['Weapon'] = {
-				['Enabled'] = true,
-				['Color'] = Color3.fromRGB(255, 255, 255),
-			},
-		},
-	}
-}
-        local Table = Library['Table'];
+                    ['Weapon'] = {
+                        ['Enabled'] = true,
+                        ['Color'] = Color3.fromRGB(255, 255, 255),
+                    },
+                },
+            }
+        }
+
+        local Library = getgenv().Library
+        local Table = Library.Table;
 
         local Fonts = {}; do
             local function FontsRegister(Name, Weight, Style, Asset)
